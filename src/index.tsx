@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as Sentry from '@sentry/react';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+Sentry.init({
+  dsn: process.env.REACT_APP_SENTRY_DSN,
+  tracesSampleRate: 1.0,
+});
 
 ReactDOM.render(
   <React.StrictMode>
