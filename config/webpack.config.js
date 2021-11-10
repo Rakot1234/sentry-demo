@@ -568,7 +568,7 @@ module.exports = function (webpackEnv) {
           },
           isEnvProduction
             ? {
-                base: '/sentry-demo/',
+                publicPath: '',
                 minify: {
                   removeComments: true,
                   collapseWhitespace: true,
