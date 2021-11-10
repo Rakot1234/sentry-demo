@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import * as Sentry from '@sentry/react';
 import './index.css';
 import App from './App';
@@ -12,7 +12,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
