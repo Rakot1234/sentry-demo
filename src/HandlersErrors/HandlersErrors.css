@@ -1,0 +1,37 @@
+.handlers-errors {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 0.3s;
+    animation-name: appear;
+}
+
+.handlers-errors__button {
+  cursor: pointer;
+  background-color: #00B956;
+  min-width: 320px;
+  height: 48px;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.5s all;
+}
+
+.handlers-errors__button:hover {
+    background-color: #10E272;
+}
+
+.handlers-errors__button:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.handlers-errors__button_disabled {
+    pointer-events: none;
+    background-color: #D8D8D8;
+    color: black;
+}
+
+.handlers-errors__fallback {
+  background-color: black;
+}

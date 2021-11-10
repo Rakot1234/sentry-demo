@@ -1,0 +1,54 @@
+.render-errors {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 0.3s;
+    animation-name: appear;
+}
+
+.render-errors__tile * {
+    color: black;
+}
+
+.render-errors__tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 640px;
+    color: black;
+}
+
+.render-errors__tile:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.render-errors__button {
+    cursor: pointer;
+    background-color: #00B956;
+    color: white;
+    min-width: 320px;
+    height: 48px;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s all;
+    margin-top: 16px;
+}
+  
+.render-errors__button:hover {
+    background-color: #10E272;
+}
+
+.render-errors__input {
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.render-errors__input:not(:last-child) {
+    margin-right: 16px;
+}

@@ -1,0 +1,46 @@
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 540px;
+  height: 60px;
+  border-radius: 16px;
+}
+  
+.navigation__link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navigation__text {
+  color: black;
+  transition: 0.5s all;
+}
+
+.navigation__link:hover {
+  text-decoration: underline;
+}
+  
+.navigation__link_active {
+  pointer-events: none;
+}
+
+.navigation__link_active .navigation__text {
+  opacity: 0.4;
+}
+  
+.navigation__link:not(:last-child) {
+  margin-right: 65px;
+}
+
+.navigation__link:not(:last-child):after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  height: 20px;
+  width: 1px;
+  right: -32px;
+}
