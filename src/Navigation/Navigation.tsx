@@ -8,7 +8,7 @@ const { MAIN, RENDER_ERROR, WITHOUT_SENTRY } = PagesEnum;
 const Navigation: React.FC = () => {
     const { pathname } = useLocation();
 
-    const isMainPage = pathname === routesMap[MAIN];
+    const isMainPage = pathname === routesMap[MAIN] || pathname === `${routesMap[MAIN]}/`;
     const isRenderPage = pathname.includes(routesMap[RENDER_ERROR]);
     const isWithoutSentryPage = pathname.includes(routesMap[WITHOUT_SENTRY]);
 
