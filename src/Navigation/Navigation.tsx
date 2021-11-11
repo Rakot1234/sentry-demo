@@ -9,8 +9,8 @@ const Navigation: React.FC = () => {
     const { pathname } = useLocation();
 
     const isMainPage = pathname === routesMap[MAIN];
-    const isRenderPage = pathname === routesMap[RENDER_ERROR];
-    const isWithoutSentryPage = pathname === routesMap[WITHOUT_SENTRY];
+    const isRenderPage = pathname.includes(routesMap[RENDER_ERROR]);
+    const isWithoutSentryPage = pathname.includes(routesMap[WITHOUT_SENTRY]);
 
     const linkClass = 'navigation__link';
     const activeLinkClass = 'navigation__link navigation__link_active';
