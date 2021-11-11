@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { ErrorBoundary } from "@sentry/react";
-import { PagesEnum } from './types';
 import { Router, Redirect, Route, Switch } from 'react-router-dom';
 import Navigation from './Navigation/Navigation';
 import HandlersErrors from './HandlersErrors/HandlersErrors';
 import RenderErrors from './RenderErrors/RenderErrors';
 import { createBrowserHistory } from 'history';
+import { PagesEnum, routesMap } from './types';
 
 const { MAIN, RENDER_ERROR, WITHOUT_SENTRY } = PagesEnum;
 
@@ -18,7 +18,7 @@ const App: React.FC = () => (
                     <Navigation />
                     <div className="app__content">
                         <Switch>
-                            <Route path={MAIN} exact>
+                            <Route path={routesMap[MAIN]} exact>
                                 <ErrorBoundary
                                     beforeCapture={(scope) => { scope.setTag('location', 'handlers') }}
                                     fallback={<div className="app__fallback">Some Error</div>}
@@ -26,7 +26,7 @@ const App: React.FC = () => (
                                     <HandlersErrors />
                                 </ErrorBoundary>
                             </Route>
-                            <Route path={RENDER_ERROR} exact>
+                            <Route path={routesMap[RENDER_ERROR]} exact>
                                 <ErrorBoundary
                                     beforeCapture={(scope) => { scope.setTag('location', 'render') }}
                                     fallback={<div className="app__fallback">Some Error</div>}
@@ -34,7 +34,7 @@ const App: React.FC = () => (
                                     <RenderErrors />
                                 </ErrorBoundary>
                             </Route>
-                            <Route path={WITHOUT_SENTRY} exact>
+                            <Route path={routesMap[WITHOUT_SENTRY]} exact>
                                 <RenderErrors />
                             </Route>
                             <Route>

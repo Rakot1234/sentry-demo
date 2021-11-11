@@ -55,12 +55,12 @@ const RenderErrors: React.FC = () => {
     return (
         <div className="render-errors">
             <div className="render-errors__tile">
-                <h3>Ошибка при использовании таймера</h3>
+                <h3>Error while using timer</h3>
                 {`Прошло времени: ${timer.seconds} сек.`}
-                <button className="render-errors__button" onClick={handleTimerStart}>Запустить таймер</button>
+                <button className="render-errors__button" onClick={handleTimerStart}>Start timer</button>
             </div>
             <div className="render-errors__tile">
-                <h3>Ошибка при отправки формы</h3>
+                <h3>Error on form submit</h3>
                 <form>
                     <input
                         className="render-errors__input"
@@ -77,7 +77,7 @@ const RenderErrors: React.FC = () => {
                         onChange={handleInputChange}
                     />
                 </form>
-                <button className="render-errors__button" onClick={handleFormSubmit}>Отправить</button>
+                <button className="render-errors__button" onClick={handleFormSubmit}>Submit</button>
             </div>
         </div>
     );
