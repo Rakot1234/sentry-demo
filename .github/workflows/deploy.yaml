@@ -9,6 +9,8 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    env:
+      SENTRY_RELEASE_VERSION: ${{ env.GITHUB_SHA }}
 
     steps:
       - uses: actions/checkout@v2
@@ -23,8 +25,6 @@ jobs:
 
       - name: Build
         run: yarn build
-        env:
-          SENTRY_RELEASE_VERSION: ${{ env.GITHUB_SHA }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

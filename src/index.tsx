@@ -14,6 +14,7 @@ Sentry.init({
     if (event.exception) {
       Sentry.showReportDialog({ eventId: event.event_id });
     }
+    
     return event;
   },
 });
