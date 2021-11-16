@@ -735,7 +735,7 @@ module.exports = function (webpackEnv) {
           authToken: '65e507bbfbef409a9a24f02ae6ac7450efc2295a3c9c40ec8a8a219931f5e668',
           org: "rakot",
           project: "demo",
-          release: process.env.SENTRY_RELEASE_VERSION || '0.1.0',
+          release: process.env.SENTRY_RELEASE_VERSION,
           include: "static",
           ignore: ["node_modules", "webpack.config.js"],
         }),

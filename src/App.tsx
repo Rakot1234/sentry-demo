@@ -29,6 +29,7 @@ const App: React.FC = () => (
                             <ErrorBoundary
                                 beforeCapture={(scope) => { scope.setTag('location', 'render') }}
                                 fallback={<div className="app__fallback">Some Error</div>}
+                                showDialog
                             >
                                 <RenderErrors />
                             </ErrorBoundary>

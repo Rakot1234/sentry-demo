@@ -9,14 +9,7 @@ import { Integrations } from '@sentry/tracing';
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
   integrations: [new Integrations.BrowserTracing()],
-  tracesSampleRate: 1.0,
-  beforeSend(event) {
-    if (event.exception) {
-      Sentry.showReportDialog({ eventId: event.event_id });
-    }
-    
-    return event;
-  },
+  tracesSampleRate: 1.0
 });
 
 render(
