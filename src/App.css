@@ -36,3 +36,15 @@
   flex-grow: 1;
   justify-content: center;
 }
+
+.app__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 256px;
+  height: 256px;
+  background-color: #00B956;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: 500;
+}

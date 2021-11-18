@@ -737,7 +737,6 @@ module.exports = function (webpackEnv) {
           project: "demo",
           release: process.env.SENTRY_RELEASE_VERSION,
           include: "static",
-          ignore: ["node_modules", "webpack.config.js"],
         }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
